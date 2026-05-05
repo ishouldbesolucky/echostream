@@ -17,7 +17,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             background-color: #f8fafc; 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
             color: var(--navy);
             line-height: 1.6;
         }
@@ -41,18 +41,34 @@
         .hero p { font-size: 1.2rem; color: var(--slate); }
         .services {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
             margin: 40px auto;
             padding: 0 20px;
         }
         .service-card {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
+            padding: 40px;
+            border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             border-top: 4px solid var(--blue);
+        }
+        .service-card h3 { margin-bottom: 20px; font-size: 1.5rem; }
+        .service-card ul { 
+            list-style: none; 
+            color: var(--slate);
+        }
+        .service-card li { 
+            margin-bottom: 12px; 
+            padding-left: 20px; 
+            position: relative;
+        }
+        .service-card li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--blue);
         }
         .contact-wrap {
             background-color: var(--navy);
@@ -90,35 +106,55 @@
     </style>
 </head>
 <body>
+
     <header>
         <div class="logo-container">
             <img src="EchoStream Main Logo 800x600.jpg" alt="Echo Stream Media Group Logo">
         </div>
     </header>
+
     <section class="hero">
         <h1>Digital Media Strategy & Performance Advertising</h1>
         <p>Expert consultancy for high-growth digital brands and media entities.</p>
     </section>
+
     <section class="services">
+        <!-- Blok 1: Media Buying -->
         <div class="service-card">
             <h3>Media Buying</h3>
-            <p>Data-driven execution across major ad networks and programmatic exchanges.</p>
+            <ul>
+                <li>Strategic planning across global ad networks</li>
+                <li>Real-time bidding and programmatic execution</li>
+                <li>Audience segmentation and behavioral targeting</li>
+                <li>Performance tracking and ROI optimization</li>
+            </ul>
         </div>
+
+        <!-- Blok 2: Growth Strategy -->
         <div class="service-card" style="border-top-color: var(--pink);">
             <h3>Growth Strategy</h3>
-            <p>Comprehensive scaling roadmaps for digital-first enterprises.</p>
+            <ul>
+                <li>Comprehensive digital transformation roadmaps</li>
+                <li>Market entry and competitive landscape analysis</li>
+                <li>Funnel optimization and conversion rate enhancement</li>
+                <li>Sustainable scaling for media-driven enterprises</li>
+            </ul>
         </div>
     </section>
+
     <section class="contact-wrap">
         <div class="contact-card">
             <h2>Partner With Us</h2>
             <p style="color: var(--light-slate); margin-top: 10px;">Ready to scale your digital presence? Reach out to our senior consultants directly.</p>
+            
             <a href="mailto:hello@echostreammediagroup.com?subject=Inquiry%20Echo%20Stream%20Media%20Group" class="submit-btn">
                 Send us an Email
             </a>
+
             <p style="color: var(--slate); font-size: 0.8rem; margin-top: 20px;">Direct response within 24 hours.</p>
         </div>
     </section>
+
     <footer>
         <p><strong>&copy; 2026 Echo Stream Media Group Ltd.</strong></p>
         <address class="footer-address">
@@ -126,5 +162,6 @@
             PO Box 146, Tortola, British Virgin Islands
         </address>
     </footer>
+
 </body>
 </html>
