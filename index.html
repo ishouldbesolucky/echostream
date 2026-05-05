@@ -1,202 +1,263 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Echostream Media Group | Digitale Media & Advertising</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Echostream Media Group | Digital Media Consultancy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-blue: #3A63D6;
-            --vibrant-pink: #FF4D8D;
-            --dark-blue: #1A1A2E;
-            --light-gray: #F4F7FA;
-            --text-color: #333;
+            --bg-dark: #0f172a;
+            --accent-pink: #FF4D8D;
+            --accent-blue: #3A63D6;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.3s ease;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             margin: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: #fff;
+            overflow-x: hidden;
         }
 
-        header {
-            background: #fff;
-            padding: 20px 5%;
+        /* Animated Background Elements */
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(58, 99, 214, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(255, 77, 141, 0.15) 0%, transparent 40%);
+        }
+
+        nav {
+            padding: 1.5rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.8);
         }
 
-        .logo {
-            font-weight: 700;
-            font-size: 1.5rem;
-            letter-spacing: 1px;
-            color: var(--dark-blue);
+        .logo-container img {
+            height: 50px;
+            width: auto;
+            display: block;
         }
 
         /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--dark-blue) 0%, #252850 100%);
-            color: white;
-            padding: 80px 5% 100px;
+        header {
+            padding: 120px 5% 80px;
             text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fff, var(--text-dim));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .hero p {
-            font-size: 1.2rem;
+        .hero-sub {
+            font-size: 1.25rem;
+            color: var(--text-dim);
             max-width: 700px;
-            margin: 0 auto 30px;
-            opacity: 0.9;
+            margin: 0 auto 2.5rem;
         }
 
-        /* Services */
-        .container {
-            max-width: 1100px;
-            margin: -50px auto 50px;
-            padding: 0 20px;
-        }
-
-        .services {
+        /* Services Grid */
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            padding: 0 5% 80px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .card {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-top: 5px solid var(--vibrant-pink);
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 3rem;
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Form */
-        .contact-section {
-            background-color: var(--light-gray);
-            padding: 80px 5%;
+        .card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-10px);
+            border-color: var(--accent-blue);
         }
 
-        .contact-container {
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .card p {
+            color: var(--text-dim);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 5%;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-box {
             max-width: 600px;
             margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 3.5rem;
+            border-radius: 32px;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
+        .input-group {
+            margin-bottom: 1.5rem;
         }
 
         label {
-            margin-bottom: 8px;
-            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-dim);
         }
 
         input, textarea {
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 1rem;
-        }
-
-        button {
-            background: var(--vibrant-pink);
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            padding: 1rem;
+            border-radius: 12px;
             color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 1.1rem;
-            transition: background 0.3s;
+            font-family: inherit;
         }
 
-        button:hover {
-            background: #e63e7a;
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-pink);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn {
+            width: 100%;
+            background: linear-gradient(45deg, var(--accent-blue), var(--accent-pink));
+            color: white;
+            padding: 1.25rem;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            filter: brightness(1.2);
+            box-shadow: 0 0 30px rgba(255, 77, 141, 0.3);
         }
 
         footer {
-            background: var(--dark-blue);
-            color: white;
-            padding: 40px 5%;
+            padding: 60px 5%;
             text-align: center;
-            font-size: 0.9rem;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-dim);
         }
 
-        .address-info {
-            margin-top: 20px;
-            opacity: 0.7;
+        .address {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            line-height: 1.8;
             font-style: normal;
+        }
+
+        @media (max-width: 768px) {
+            header { padding-top: 60px; }
+            .contact-box { padding: 2rem; }
         }
     </style>
 </head>
 <body>
+    <div class="bg-glow"></div>
 
-<header>
-    <div class="logo">ECHOSTREAM MEDIA GROUP</div>
-</header>
+    <nav>
+        <div class="logo-container">
+            <!-- Het logo wordt hier geladen -->
+            <img src="EchoStream Main Logo 800x600.jpg" alt="Echostream Media Group Logo">
+        </div>
+    </nav>
 
-<section class="hero">
-    <h1>Maximale Impact in Digitale Media</h1>
-    <p>Wij zijn experts in het strategisch inzetten van online advertentiecampagnes die resultaat leveren voor uw merk.</p>
-</section>
+    <header>
+        <h1>Next-Gen Media <br>Strategic Consulting</h1>
+        <p class="hero-sub">We empower global brands with high-performance digital media strategies and data-driven advertising campaigns.</p>
+    </header>
 
-<div class="container">
-    <div class="services">
+    <section class="grid">
         <div class="card">
-            <h3>Digitale Consultancy</h3>
-            <p>Strategisch advies op maat om uw online aanwezigheid te versterken en uw doelgroep effectief te bereiken.</p>
+            <h3>Digital Media Strategy</h3>
+            <p>Tailored consultancy to navigate the complex digital landscape and maximize your brand's global reach.</p>
         </div>
-        <div class="card" style="border-top-color: var(--primary-blue);">
-            <h3>Advertentie Campagnes</h3>
-            <p>Van concept tot executie: wij beheren hoogwaardige campagnes die zorgen voor meetbare groei.</p>
+        <div class="card">
+            <h3>Performance Marketing</h3>
+            <p>End-to-end management of online advertising campaigns designed for measurable ROI and sustainable growth.</p>
         </div>
-    </div>
-</div>
+    </section>
 
-<section class="contact-section">
-    <div class="contact-container">
-        <h2 style="text-align:center">Neem Contact Op</h2>
-        <p style="text-align:center; color: #666; margin-bottom: 30px;">Heeft u een vraag of wilt u een samenwerking bespreken? Laat een bericht achter.</p>
-        
-        <!-- Formulier gekoppeld aan info@echostreammedia.com -->
-        <form action="mailto:info@echostreammedia.com" method="post" enctype="text-plain">
-            <label for="name">Naam</label>
-            <input type="text" id="name" name="name" placeholder="Uw naam" required>
+    <section class="contact">
+        <div class="contact-box">
+            <h2 style="margin-top:0; text-align:center">Inquiry & Collaboration</h2>
+            <p style="text-align:center; color: var(--text-dim); margin-bottom: 2rem;">Ready to scale your media impact? Get in touch with our experts.</p>
+            
+            <form action="mailto:info@echostreammedia.com" method="post" enctype="text/plain">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" required placeholder="John Doe">
+                </div>
+                <div class="input-group">
+                    <label>Business Email</label>
+                    <input type="email" name="email" required placeholder="name@company.com">
+                </div>
+                <div class="input-group">
+                    <label>Project Details</label>
+                    <textarea name="message" rows="4" required placeholder="How can we help your business grow?"></textarea>
+                </div>
+                <button type="submit" class="btn">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
 
-            <label for="email">E-mailadres</label>
-            <input type="email" id="email" name="email" placeholder="Uw e-mailadres" required>
-
-            <label for="message">Bericht</label>
-            <textarea id="message" name="message" rows="5" placeholder="Waar kunnen we u mee helpen?" required></textarea>
-
-            <button type="submit">Verzend Bericht</button>
-        </form>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2026 Echostream Media Group Ltd.</p>
-    <address class="address-info">
-        Trident Chambers, Wickhams Cay, Road Town<br>
-        PO Box 146, Tortola, British Virgin Islands
-    </address>
-</footer>
-
+    <footer>
+        <p>&copy; 2026 Echostream Media Group Ltd.</p>
+        <address class="address">
+            Trident Chambers, Wickhams Cay, Road Town<br>
+            PO Box 146, Tortola, British Virgin Islands
+        </address>
+    </footer>
 </body>
 </html>
