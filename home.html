@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echostream Media Group | Digitale Media & Advertising</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #3A63D6;
+            --vibrant-pink: #FF4D8D;
+            --dark-blue: #1A1A2E;
+            --light-gray: #F4F7FA;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        header {
+            background: #fff;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            color: var(--dark-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, #252850 100%);
+            color: white;
+            padding: 80px 5% 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        /* Services */
+        .container {
+            max-width: 1100px;
+            margin: -50px auto 50px;
+            padding: 0 20px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--vibrant-pink);
+        }
+
+        /* Form */
+        .contact-section {
+            background-color: var(--light-gray);
+            padding: 80px 5%;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        button {
+            background: var(--vibrant-pink);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #e63e7a;
+        }
+
+        footer {
+            background: var(--dark-blue);
+            color: white;
+            padding: 40px 5%;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .address-info {
+            margin-top: 20px;
+            opacity: 0.7;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">ECHOSTREAM MEDIA GROUP</div>
+</header>
+
+<section class="hero">
+    <h1>Maximale Impact in Digitale Media</h1>
+    <p>Wij zijn experts in het strategisch inzetten van online advertentiecampagnes die resultaat leveren voor uw merk.</p>
+</section>
+
+<div class="container">
+    <div class="services">
+        <div class="card">
+            <h3>Digitale Consultancy</h3>
+            <p>Strategisch advies op maat om uw online aanwezigheid te versterken en uw doelgroep effectief te bereiken.</p>
+        </div>
+        <div class="card" style="border-top-color: var(--primary-blue);">
+            <h3>Advertentie Campagnes</h3>
+            <p>Van concept tot executie: wij beheren hoogwaardige campagnes die zorgen voor meetbare groei.</p>
+        </div>
+    </div>
+</div>
+
+<section class="contact-section">
+    <div class="contact-container">
+        <h2 style="text-align:center">Neem Contact Op</h2>
+        <p style="text-align:center; color: #666; margin-bottom: 30px;">Heeft u een vraag of wilt u een samenwerking bespreken? Laat een bericht achter.</p>
+        
+        <!-- Formulier gekoppeld aan info@echostreammedia.com -->
+        <form action="mailto:info@echostreammedia.com" method="post" enctype="text-plain">
+            <label for="name">Naam</label>
+            <input type="text" id="name" name="name" placeholder="Uw naam" required>
+
+            <label for="email">E-mailadres</label>
+            <input type="email" id="email" name="email" placeholder="Uw e-mailadres" required>
+
+            <label for="message">Bericht</label>
+            <textarea id="message" name="message" rows="5" placeholder="Waar kunnen we u mee helpen?" required></textarea>
+
+            <button type="submit">Verzend Bericht</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Echostream Media Group Ltd.</p>
+    <address class="address-info">
+        Trident Chambers, Wickhams Cay, Road Town<br>
+        PO Box 146, Tortola, British Virgin Islands
+    </address>
+</footer>
+
+</body>
+</html>
