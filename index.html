@@ -3,442 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Echostream Media Group | Digital Media & Advertising Consultancy</title>
+    <title>Echostream Media Group | Strategic Digital Media Consultancy</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-blue: #3A63D6;
             --accent-pink: #FF4D8D;
-            --dark-text: #1e293b;
-            --light-text: #64748b;
-            --bg-light: #f8fafc;
+            --dark-slate: #1e293b;
+            --light-slate: #64748b;
+            --bg-soft: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            margin: 0;
-            background-color: #fff;
-            color: var(--dark-text);
-            line-height: 1.7;
+            background-color: #ffffff;
+            color: var(--dark-slate);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Hero Section with Large Logo */
+        /* Hero & Logo Section */
         header {
-            padding: 80px 5% 60px;
+            padding: 60px 20px;
             text-align: center;
             background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 100%);
         }
 
+        .logo-wrapper {
+            margin-bottom: 30px;
+        }
+
         .logo-main {
-            max-width: 450px; /* Logo groter gemaakt */
+            max-width: 500px; /* Groot en passend gemaakt */
             width: 100%;
             height: auto;
-            margin-bottom: 40px;
-            /* Subtiele schaduw om de witte rand van de afbeelding te verzachten */
-            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.05));
+            display: inline-block;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
         }
 
         h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
             font-weight: 800;
-            color: var(--dark-text);
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-        }
-
-        .hero-text {
-            font-size: 1.25rem;
-            color: var(--light-text);
-            max-width: 800px;
-            margin: 0 auto 40px;
-        }
-
-        /* Detailed Content Section */
-        .content-section {
-            padding: 80px 5%;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .service-box {
-            padding: 40px;
-            background: var(--bg-light);
-            border-radius: 20px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .service-box h3 {
-            color: var(--primary-blue);
-            font-size: 1.5rem;
-            margin-top: 0;
-        }
-
-        .service-box ul {
-            padding-left: 20px;
-            color: var(--light-text);
-        }
-
-        /* Contact Form */
-        .contact-container {
-            background: var(--dark-text);
-            color: white;
-            padding: 80px 5%;
-            margin-top: 80px;
-        }
-
-        .form-card {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 24px;
-            color: var(--dark-text);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #cbd5e1;
-            border-radius: 8px;
-            font-family: inherit;
-        }
-
-        .btn {
-            width: 100%;
-            background: var(--primary-blue);
-            color: white;
-            padding: 16px;
-            border: none;
-            border-radius: 8px;
-            font-weight: 700;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background: var(--accent-pink);
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px 5%;
-            color: var(--light-text);
-            font-size: 0.9rem;
-        }
-
-        .address {
-            font-style: normal;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <!-- Logo centraal en groot geplaatst -->
-        <img src="EchoStream Main Logo 800x600.jpg" alt="Echostream Media Group" class="logo-main">
-        <h1>Global Media Solutions & <br>Strategic Advertising</h1>
-        <p class="hero-text">Echostream Media Group is a premier consultancy firm specializing in high-impact digital media strategies. We bridge the gap between complex data and creative advertising to drive measurable growth for international brands.</p>
-    </header>
-
-    <section class="content-section">
-        <div style="text-align: center; margin-bottom: 60px;">
-            <h2 style="font-size: 2rem;">Our Expertise</h2>
-            <p style="color: var(--light-text);">We provide end-to-end solutions for the digital age.</p>
-        </div>
-
-        <div class="grid">
-            <div class="service-box">
-                <h3>Digital Media Strategy</h3>
-                <p>We analyze market trends and audience behavior to build a roadmap for your digital success. Our approach includes:</p>
-                <ul>
-                    <li>Channel Selection & Optimization</li>
-                    <li>Audience Segmentation</li>
-                    <li>Content Strategy Consulting</li>
-                </ul>
-            </div>
-            <div class="service-box">
-                <h3>Performance Advertising</h3>
-                <p>Data-driven campaigns that focus on ROI. We manage and scale your advertising across all major platforms:</p>
-                <ul>
-                    <li>Search & Social Media Ads</li>
-                    <li>Programmatic Advertising</li>
-                    <li>Campaign Analytics & Reporting</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact-container">
-        <div class="form-card">
-            <h2 style="margin-top:0">Inquiry & Support</h2>
-            <p style="color: var(--light-text); margin-bottom: 30px;">Partner with us for your next campaign. Reach out to our consultancy team below.</p>
-            
-            <form action="mailto:info@echostreammedia.com" method="post" enctype="text/plain">
-                <label>Name</label>
-                <input type="text" name="name" placeholder="Your name" required>
-
-                <label>Corporate Email</label>
-                <input type="email" name="email" placeholder="email@company.com" required>
-
-                <label>Message</label>
-                <textarea name="message" rows="4" placeholder="Briefly describe your project goals..." required></textarea>
-
-                <button type="submit" class="btn">Send Request</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Echostream Media Group Ltd.</p>
-        <address class="address">
-            Trident Chambers, Wickhams Cay, Road Town<br>
-            PO Box 146, Tortola, British Virgin Islands
-        </address>
-    </footer>
-
-</body>
-</html>            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: 
-                radial-gradient(circle at 10% 20%, rgba(58, 99, 214, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(255, 77, 141, 0.15) 0%, transparent 40%);
-        }
-
-        nav {
-            padding: 1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--glass-border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(15, 23, 42, 0.8);
-        }
-
-        .logo-container img {
-            height: 50px;
-            width: auto;
-            display: block;
-        }
-
-        /* Hero Section */
-        header {
-            padding: 120px 5% 80px;
-            text-align: center;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 800;
+            color: var(--dark-slate);
+            margin-bottom: 24px;
+            letter-spacing: -1.5px;
             line-height: 1.1;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(to right, #fff, var(--text-dim));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
-        .hero-sub {
-            font-size: 1.25rem;
-            color: var(--text-dim);
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
+        .hero-subtext {
+            font-size: 1.3rem;
+            color: var(--light-slate);
+            max-width: 850px;
+            margin: 0 auto 40px;
+            font-weight: 300;
         }
 
-        /* Services Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            padding: 0 5% 80px;
+        /* Content Sections */
+        .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
         }
 
         .card {
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            padding: 3rem;
+            padding: 50px;
+            background: var(--bg-soft);
             border-radius: 24px;
-            position: relative;
-            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
-            background: rgba(255, 255, 255, 0.06);
-            transform: translateY(-10px);
-            border-color: var(--accent-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
         }
 
         .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #fff;
+            color: var(--primary-blue);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
         }
 
-        .card p {
-            color: var(--text-dim);
+        .card ul {
+            list-style: none;
+            margin-top: 20px;
         }
 
-        /* Contact Section */
-        .contact {
-            padding: 100px 5%;
-            background: rgba(0, 0, 0, 0.2);
+        .card ul li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 12px;
+            color: var(--light-slate);
         }
 
-        .contact-box {
-            max-width: 600px;
+        .card ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent-pink);
+            font-weight: bold;
+        }
+
+        /* Contact Area */
+        .contact-wrap {
+            background: var(--dark-slate);
+            padding: 100px 20px;
+            margin-top: 50px;
+        }
+
+        .contact-card {
+            max-width: 650px;
             margin: 0 auto;
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            padding: 3.5rem;
-            border-radius: 32px;
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
         }
 
-        .input-group {
-            margin-bottom: 1.5rem;
+        .form-group {
+            margin-bottom: 20px;
         }
 
         label {
             display: block;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-            color: var(--text-dim);
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
         }
 
         input, textarea {
             width: 100%;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--glass-border);
-            padding: 1rem;
+            padding: 14px;
+            border: 1px solid #cbd5e1;
             border-radius: 12px;
-            color: white;
+            font-size: 1rem;
             font-family: inherit;
         }
 
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--accent-pink);
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .btn {
+        .submit-btn {
             width: 100%;
-            background: linear-gradient(45deg, var(--accent-blue), var(--accent-pink));
+            background: var(--primary-blue);
             color: white;
-            padding: 1.25rem;
+            padding: 18px;
             border: none;
             border-radius: 12px;
             font-weight: 700;
+            font-size: 1.1rem;
             cursor: pointer;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            transition: background 0.3s ease;
         }
 
-        .btn:hover {
-            filter: brightness(1.2);
-            box-shadow: 0 0 30px rgba(255, 77, 141, 0.3);
+        .submit-btn:hover {
+            background: var(--accent-pink);
         }
 
+        /* Footer */
         footer {
-            padding: 60px 5%;
+            padding: 80px 20px;
             text-align: center;
-            border-top: 1px solid var(--glass-border);
-            color: var(--text-dim);
+            color: var(--light-slate);
+            border-top: 1px solid #eee;
         }
 
-        .address {
-            margin-top: 1rem;
-            font-size: 0.85rem;
-            line-height: 1.8;
+        .footer-address {
             font-style: normal;
-        }
-
-        @media (max-width: 768px) {
-            header { padding-top: 60px; }
-            .contact-box { padding: 2rem; }
+            margin-top: 15px;
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <div class="bg-glow"></div>
-
-    <nav>
-        <div class="logo-container">
-            <!-- Het logo wordt hier geladen -->
-            <img src="EchoStream Main Logo 800x600.jpg" alt="Echostream Media Group Logo">
-        </div>
-    </nav>
 
     <header>
-        <h1>Next-Gen Media <br>Strategic Consulting</h1>
-        <p class="hero-sub">We empower global brands with high-performance digital media strategies and data-driven advertising campaigns.</p>
+        <div class="logo-wrapper">
+            <!-- Logo is nu centraal en groot geplaatst -->
+            <img src="EchoStream Main Logo 800x600.jpg" alt="Echostream Media Group" class="logo-main">
+        </div>
+        <h1>Elevating Global Media Presence</h1>
+        <p class="hero-subtext">Echostream Media Group is a premier consultancy for digital media and online advertising. We deliver high-performance campaigns that scale international brands through data-driven precision.</p>
     </header>
 
-    <section class="grid">
-        <div class="card">
-            <h3>Digital Media Strategy</h3>
-            <p>Tailored consultancy to navigate the complex digital landscape and maximize your brand's global reach.</p>
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Core Consultancy</h2>
+            <p style="color: var(--light-slate);">Expertise that transforms your digital advertising ROI.</p>
         </div>
-        <div class="card">
-            <h3>Performance Marketing</h3>
-            <p>End-to-end management of online advertising campaigns designed for measurable ROI and sustainable growth.</p>
-        </div>
-    </section>
 
-    <section class="contact">
-        <div class="contact-box">
-            <h2 style="margin-top:0; text-align:center">Inquiry & Collaboration</h2>
-            <p style="text-align:center; color: var(--text-dim); margin-bottom: 2rem;">Ready to scale your media impact? Get in touch with our experts.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Digital Media Strategy</h3>
+                <p>We provide a comprehensive roadmap to navigate the global digital landscape, focusing on sustainable brand growth and audience engagement.</p>
+                <ul>
+                    <li>Multi-channel Strategy Development</li>
+                    <li>Audience Insights & Segmentation</li>
+                    <li>Content Lifecycle Consulting</li>
+                    <li>Global Market Entry Planning</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Advertising Performance</h3>
+                <p>Full-scale management of online advertising campaigns. We leverage cutting-edge tools to ensure every dollar spent delivers maximum impact.</p>
+                <ul>
+                    <li>Search & Paid Social Management</li>
+                    <li>Programmatic Ad Execution</li>
+                    <li>Conversion Rate Optimization</li>
+                    <li>Real-time Campaign Analytics</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact-wrap">
+        <div class="contact-card">
+            <h2 style="margin-bottom:10px">Partner With Us</h2>
+            <p style="color: var(--light-slate); margin-bottom: 35px;">Discuss your next project with our senior media consultants.</p>
             
             <form action="mailto:info@echostreammedia.com" method="post" enctype="text/plain">
-                <div class="input-group">
+                <div class="form-group">
                     <label>Full Name</label>
-                    <input type="text" name="name" required placeholder="John Doe">
+                    <input type="text" name="name" placeholder="Enter your name" required>
                 </div>
-                <div class="input-group">
-                    <label>Business Email</label>
-                    <input type="email" name="email" required placeholder="name@company.com">
+                <div class="form-group">
+                    <label>Work Email</label>
+                    <input type="email" name="email" placeholder="you@company.com" required>
                 </div>
-                <div class="input-group">
-                    <label>Project Details</label>
-                    <textarea name="message" rows="4" required placeholder="How can we help your business grow?"></textarea>
+                <div class="form-group">
+                    <label>Project Brief</label>
+                    <textarea name="message" rows="5" placeholder="How can we assist your media growth?" required></textarea>
                 </div>
-                <button type="submit" class="btn">Send Inquiry</button>
+                <button type="submit" class="submit-btn">Send Inquiry</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Echostream Media Group Ltd.</p>
-        <address class="address">
+        <p><strong>&copy; 2026 Echostream Media Group Ltd.</strong></p>
+        <address class="footer-address">
             Trident Chambers, Wickhams Cay, Road Town<br>
             PO Box 146, Tortola, British Virgin Islands
         </address>
     </footer>
+
 </body>
 </html>
